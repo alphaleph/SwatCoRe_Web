@@ -1,1 +1,80 @@
 /* CSS declarations go here */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+	font-family: Roboto, Helvetica, Arial, sans-serif
+	font-weight: lighter;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #77bb99;
+    color: white;
+}
+
+body, input {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    color: #787E7B;
+}
+
+input {
+    font-size: 100%;
+}
+
+a, a:visited, a:active {
+    color: #258;
+}
+
+h1 {
+	font-weight: lighter;
+	font-family: Roboto;
+    font-size: 800%;
+    padding: 130px;
+	color: white;
+	text-align: center;
+}
+
+h3 {
+	font-weight: black;
+	font-family: Roboto;
+    font-size: 250%;
+	color: #787E7B;
+	padding-bottom: 15px; 
+}
+
+#hello {
+	font-weight: lighter;
+	padding-top: 10%;
+	padding-left: 8%;
+	padding-bottom: 30%;
+	color: #787E7B;
+	background: white;
+}
+
+#search-box {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 120%;
+    height: 50px;
+    padding-bottom: 15%
+    
+}
+
+#bottom-panel {
+	background: white;
+	text-align: center;
+	padding-bottom: 25px;
+	color: #787E7B;
+	font-weight: lighter;
+	font-size: 80%
+}
