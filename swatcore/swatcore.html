@@ -3,17 +3,69 @@
 </head>
 
 <body>
-  <h1 id="title">SwatCoRe</h1>
-  {{> search}}
+	<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '336737236507560',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '336737236507560',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+  {{> topbar}}
+  {{> toppanel}}
   {{> hello}}
   {{> bottompanel}}
 </body>
 
+<template name="topbar">
+	<div id="top-bar">
+		{{>loginButtons}}
+	</div>
+</template>
+
+<template name="toppanel">
+	<div id= "top-panel">
+		<h1 id="title">SwatCoRe</h1>
+		{{> search}}
+	</div>
+</template>
+
 <template name="search">
 	<div id = "search-box">
 		<form action ="search_box.asp">
-			<input type="text" id="main-search-box" placeholder="Search for a Class or Professor" size="60"/>
-			<input type="submit" id="submit" value="Submit">
+			<div class="form-group">
+           		<div class="col-md-3">
+           		 <input type="text" id="main-search-box" placeholder="Search for a Class or Professor">
+           		 <input type="submit" id="submit" value="Submit">
+           </div>
+         </div>
 		</form>
 	</div>
 </template>
@@ -22,7 +74,7 @@
 	<div id="hello">
   		<h3>Hello Swarthmore!</h3>
   		<p>Welcome to SwatCore, the Swarthmore Course Review Website.</p>
- 		 <p>This website is built and maintained by Yenny Cheung. Feel free to reach me at ycheung1@swarthmore.edu.</p>
+ 		 <p>This website is built and maintained by Yenny Cheung and Alpha Chau. Feel free to reach us at swatcoreteam@gmail.com.</p>
  	</div>
 </template>
 

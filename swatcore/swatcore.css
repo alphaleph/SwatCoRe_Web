@@ -15,7 +15,6 @@ html, body {
 body {
 	font-family: Roboto, Helvetica, Arial, sans-serif
 	font-weight: lighter;
-    font-size: 16px;
     line-height: 1.5;
     background: #77bb99;
     color: white;
@@ -38,8 +37,7 @@ a, a:visited, a:active {
 h1 {
 	font-weight: lighter;
 	font-family: Roboto;
-    font-size: 800%;
-    padding: 130px;
+    font-size: 900%;
 	color: white;
 	text-align: center;
 }
@@ -50,6 +48,10 @@ h3 {
     font-size: 250%;
 	color: #787E7B;
 	padding-bottom: 15px; 
+}
+
+#title {
+	padding-top: 16%;
 }
 
 #hello {
@@ -66,9 +68,16 @@ h3 {
     text-align: center;
     font-size: 120%;
     height: 50px;
-    padding-bottom: 15%
+    padding-bottom: 15%;
+    padding-top:10%;
     
 }
+
+#top-bar {
+	padding: 1%;
+	text-align: right;
+}
+
 
 #bottom-panel {
 	background: white;
@@ -78,3 +87,12 @@ h3 {
 	font-weight: lighter;
 	font-size: 80%
 }
+
+#main-search-box {
+    width:500px;
+}
+
+input{
+	font-size: 60%;
+}
+
