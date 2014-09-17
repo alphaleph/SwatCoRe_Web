@@ -76,6 +76,7 @@ h3 {
 #top-bar {
 	padding: 1%;
 	text-align: right;
+	color:white;
 }
 
 
@@ -88,7 +89,7 @@ h3 {
 	font-size: 80%
 }
 
-#main-search-box {
+.form-control {
     width:500px;
 }
 

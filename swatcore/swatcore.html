@@ -40,7 +40,16 @@
 </script>
   {{> topbar}}
   {{> toppanel}}
+  <div class="container" id="main">
+    {{#if currentUser}}
+      {{> addreview}}
+    {{/if}}
+    {{#unless currentUser}}
+      {{> banner}}
+    {{/unless}}
+    </div>
   {{> hello}}
+  {{> redirect}}
   {{> bottompanel}}
 </body>
 
@@ -54,20 +63,27 @@
 	<div id= "top-panel">
 		<h1 id="title">SwatCoRe</h1>
 		{{> search}}
+    {{> lists}}
 	</div>
 </template>
 
 <template name="search">
 	<div id = "search-box">
-		<form action ="search_box.asp">
-			<div class="form-group">
-           		<div class="col-md-3">
-           		 <input type="text" id="main-search-box" placeholder="Search for a Class or Professor">
-           		 <input type="submit" id="submit" value="Submit">
-           </div>
-         </div>
-		</form>
-	</div>
+		<form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search for a class or professor">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </form>
+  </div>
+</template>
+
+<template name="lists">
+  <ul>
+    {{#each lists}}
+      <li>{{name}}</li>
+    {{/each}}
+  </ul>
 </template>
 
 <template name="hello">
@@ -78,9 +94,33 @@
  	</div>
 </template>
 
+<template name="banner">
+  <div class="container">
+    <div class="row">
+        <div class="span6">
+            <div class="well">
+              <h4>Sign in with Facebook to search for courses and post reviews.</h4>
+              {{>loginButtons}}
+            </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="addreview">
+  <textarea rows="3" class="input-xxlarge" name="reviewText" id="reviewText" placeholder="Add Your Course Review"></textarea>
+  <br/>
+  <input type="button" class="btn-info add-review" value="Add Review"/>
+</template>
+
+<template name="redirect">
+  <input type="button" class="btn-info redirect" value="Redirect"/>
+</template>
+
 <template name ="bottompanel">
 	<div id="bottom-panel">
 		<p> Home  |  About  |  FAQs  |  Feedback </p>
+    <a href="{{pathFor 'home'}}">Go home!</a>
 		<p>Copyright © 2014 Yenny Cheung </p>
 	</div>
 </template>
